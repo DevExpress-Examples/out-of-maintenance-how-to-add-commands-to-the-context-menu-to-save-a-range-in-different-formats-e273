@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="GetTextMethods.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="600" d:DesignWidth="731" xmlns:dxre="http://schemas.devexpress.com/winfx/2008/xaml/richedit" xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <dxre:RichEditUICommand x:Key="commands" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" Background="White">
+        <dxb:BarManager Name="barManager1" ToolbarGlyphSize="Small">
+            <dxb:BarManager.Items>
+                <dxb:BarButtonItem Command="{Binding Path=FileNew, Mode=OneTime, Source={StaticResource commands}}" CommandParameter="{Binding ElementName=richEditControl1}" Name="biFileNew" />
+                <dxb:BarButtonItem Command="{Binding Path=FileOpen, Mode=OneTime, Source={StaticResource commands}}" CommandParameter="{Binding ElementName=richEditControl1}" Name="biFileOpen" />
+                <dxb:BarButtonItem Command="{Binding Path=FileSaveAs, Mode=OneTime, Source={StaticResource commands}}" CommandParameter="{Binding ElementName=richEditControl1}" Name="biFileSaveAs" />
+                <dxb:BarButtonItem Command="{Binding Path=FilePrint, Mode=OneTime, Source={StaticResource commands}}" CommandParameter="{Binding ElementName=richEditControl1}" Name="biFilePrint" />
+                <dxb:BarButtonItem Command="{Binding Path=FilePrintPreview, Mode=OneTime, Source={StaticResource commands}}" CommandParameter="{Binding ElementName=richEditControl1}" Name="biFilePrintPreview" />
+                <dxb:BarButtonItem Command="{Binding Path=FileBrowserPrint, Mode=OneTime, Source={StaticResource commands}}" CommandParameter="{Binding ElementName=richEditControl1}" Name="biFileBrowserPrint" />
+                <dxb:BarButtonItem Command="{Binding Path=FileBrowserPrintPreview, Mode=OneTime, Source={StaticResource commands}}" CommandParameter="{Binding ElementName=richEditControl1}" Name="biFileBrowserPrintPreview" />
+                <dxb:BarButtonItem Command="{Binding Path=EditUndo, Mode=OneTime, Source={StaticResource commands}}" CommandParameter="{Binding ElementName=richEditControl1}" Name="biEditUndo" />
+                <dxb:BarButtonItem Command="{Binding Path=EditRedo, Mode=OneTime, Source={StaticResource commands}}" CommandParameter="{Binding ElementName=richEditControl1}" Name="biEditRedo" />
+            </dxb:BarManager.Items>
+            <dx:DockPanel>
+                <dxr:RibbonControl dx:DockPanel.Dock="Top" RibbonStyle="Office2007">
+                    <dxr:RibbonDefaultPageCategory>
+                        <dxr:RibbonPage Caption="File" Name="pageFile">
+                            <dxr:RibbonPageGroup Caption="Common" Name="grpCommon">
+                                <dxb:BarButtonItemLink BarItemName="biFileNew" />
+                                <dxb:BarButtonItemLink BarItemName="biFileOpen" />
+                                <dxb:BarButtonItemLink BarItemName="biFileSaveAs" />
+                                <dxb:BarButtonItemLink BarItemName="biFilePrint" />
+                                <dxb:BarButtonItemLink BarItemName="biFilePrintPreview" />
+                                <dxb:BarButtonItemLink BarItemName="biFileBrowserPrint" />
+                                <dxb:BarButtonItemLink BarItemName="biFileBrowserPrintPreview" />
+                                <dxb:BarButtonItemLink BarItemName="biEditUndo" />
+                                <dxb:BarButtonItemLink BarItemName="biEditRedo" />
+                            </dxr:RibbonPageGroup>
+                        </dxr:RibbonPage>
+                    </dxr:RibbonDefaultPageCategory>
+                </dxr:RibbonControl>
+                <dxre:RichEditControl Name="richEditControl1" BarManager="{Binding ElementName=barManager1, Mode=OneTime}" />
+            </dx:DockPanel>
+        </dxb:BarManager>
+    </Grid>
+</UserControl>
