@@ -1,3 +1,13 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [GetTextMethodsTestPage.aspx](./CS/GetTextMethods.Web/GetTextMethodsTestPage.aspx) (VB: [GetTextMethodsTestPage.aspx](./VB/GetTextMethods.Web/GetTextMethodsTestPage.aspx))
+* [Silverlight.js](./CS/GetTextMethods.Web/Silverlight.js)
+* [Commands.cs](./CS/GetTextMethods/Commands.cs) (VB: [Commands.vb](./VB/GetTextMethods/Commands.vb))
+* [MainPage.xaml](./CS/GetTextMethods/MainPage.xaml) (VB: [MainPage.xaml](./VB/GetTextMethods/MainPage.xaml))
+* [MainPage.xaml.cs](./CS/GetTextMethods/MainPage.xaml.cs) (VB: [MainPage.xaml](./VB/GetTextMethods/MainPage.xaml))
+* [UriProvider.cs](./CS/GetTextMethods/UriProvider.cs) (VB: [UriProvider.vb](./VB/GetTextMethods/UriProvider.vb))
+<!-- default file list end -->
 # How to add commands to the context menu to save a range in different formats 
 
 
