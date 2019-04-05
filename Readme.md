@@ -2,7 +2,7 @@
 *Files to look at*:
 
 * [Commands.cs](./CS/GetTextMethods/Commands.cs) (VB: [Commands.vb](./VB/GetTextMethods/Commands.vb))
-* [MainPage.xaml](./CS/GetTextMethods/MainPage.xaml) (VB: [MainPage.xaml.vb](./VB/GetTextMethods/MainPage.xaml.vb))
+* [MainPage.xaml](./CS/GetTextMethods/MainPage.xaml) (VB: [MainPage.xaml](./VB/GetTextMethods/MainPage.xaml))
 * [MainPage.xaml.cs](./CS/GetTextMethods/MainPage.xaml.cs) (VB: [MainPage.xaml.vb](./VB/GetTextMethods/MainPage.xaml.vb))
 * [UriProvider.cs](./CS/GetTextMethods/UriProvider.cs) (VB: [UriProvider.vb](./VB/GetTextMethods/UriProvider.vb))
 <!-- default file list end -->
